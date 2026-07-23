@@ -95,8 +95,8 @@ section {
 }
 
 .custom-cursor.hovered {
-  width: 270px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   background: radial-gradient(circle,
       rgba(255, 214, 10, 0.452) 0%,
       rgba(255, 214, 10, 0.116) 50%,
@@ -159,7 +159,7 @@ section {
   z-index: 99990;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(0, 8, 20, 0.14);
+  background: rgba(0, 8, 20, 0.116);
   border-bottom: 1px solid var(--border-premium);
   transition: .5s;
 }
@@ -200,7 +200,7 @@ section {
   color: var(--accent-luxury);
 }
 
-/* --- HOME SECTION --- */
+/* HOME SECTION */
 .home {
   scroll-margin-top: 80px;
   display: flex;
@@ -307,7 +307,7 @@ section {
 }
 
 .sci a:hover {
-  background: pink;
+  background: var(--accent-luxury);
   color: var(--bg-main);
   box-shadow: 0 0 15px var(--accent-glow);
 }
@@ -418,7 +418,7 @@ section {
 
 /* EDUCATION TIMELINE */
 .education {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 70px;
   padding: 140px 9% 100px;
   overflow: hidden;
   background: transparent;
@@ -490,22 +490,22 @@ section {
 }
 
 .timeline-content {
-  background: #001d3d9a;
+  /* background: #001d3d86; */
   padding: 28px;
   outline: none;
   border-radius: 8px;
-  box-shadow: var(--card-shadow);
-  border: 1px solid var(--border-premium);
+  /* box-shadow: var(--card-shadow); */
+  /* border: 1px solid var(--border-premium); */
   position: relative;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
 
-.timeline-content:hover {
+/* .timeline-content:hover {
   transform: translateY(-5px);
   background: var(--bg-card-hover);
   border-bottom: 2px solid var(--accent-luxury);
   box-shadow: 0 20px 40px var(--border-premium);
-}
+} */
 
 .timeline-content h3 {
   font-size: 22px;
@@ -542,7 +542,9 @@ section {
 .skills h2,
 .projects h2 {
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 1px;
   margin-bottom: 20px;
   color: var(--text-main);
 }
@@ -692,7 +694,7 @@ section {
 }
 
 .skill-circle-svg .circle-progress {
-  stroke: var(--accent-luxury, #ffc300);
+  stroke: var(--accent-luxury);
   stroke-linecap: round;
   stroke-dasharray: 251.2;
   stroke-dashoffset: 251.2;
@@ -727,6 +729,9 @@ section {
 
 .graphics h2 {
   text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 1px;
   margin-bottom: 10px;
   color: var(--text-main);
 }
@@ -829,11 +834,12 @@ section {
 }
 
 .contact h2 {
-  font-size: 40px;
   text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 1px;
   margin-bottom: 50px;
   color: var(--text-main);
-  letter-spacing: 1px;
 }
 
 .contact-container {
@@ -984,7 +990,7 @@ section {
   padding: 35px 7%;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(0, 8, 20, 0.295);
+  background: rgba(0, 8, 20, 0.24);
   border-bottom: 1px solid var(--accent-luxury);
   transition: all 0.3s ease;
 
@@ -1354,5 +1360,66 @@ section {
   .contact-form {
     padding: 25px 20px;
     min-width: 100%;
+  }
+}
+
+/* for more small screen sizes */
+@media screen and (max-width: 480px) {
+  .contact {
+    padding: 40px 16px !important;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .contact-container {
+    flex-direction: column !important;
+    gap: 25px !important;
+    width: 100% !important;
+  }
+
+  .contact-info {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .contact-info h2 {
+    text-align: center !important;
+    font-size: 24px !important;
+  }
+
+  .contact-info p {
+    font-size: 14px !important;
+  }
+
+  .contact-info a {
+    display: inline-block;
+    word-break: break-all !important;
+    overflow-wrap: anywhere !important;
+  }
+
+
+  .contact-form {
+    padding: 20px 15px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100% !important;
+    font-size: 14px !important;
+    padding: 12px !important;
+    margin-bottom: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .btn-send {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 12px 10px !important;
+    font-size: 15px !important;
+    box-sizing: border-box !important;
   }
 }
