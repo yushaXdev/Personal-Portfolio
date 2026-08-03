@@ -12,8 +12,8 @@
 
 :root {
   --bg-main: #000814;
-  --bg-surface: #001D3D;
-  --bg-card-hover: #003566;
+  --bg-surface: #001d3de5;
+  --bg-card-hover: #003566ec;
 
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
@@ -44,10 +44,7 @@ body {
   min-height: 100vh;
   max-width: 100%;
   scroll-behavior: smooth !important;
-  background:
-    radial-gradient(circle at 85% 10%, rgba(255, 195, 0, 0.05) 0%, transparent 45%),
-    radial-gradient(circle at 10% 90%, rgba(255, 195, 0, 0.04) 0%, transparent 40%),
-    linear-gradient(160deg, var(--bg-main) 0%, #04102a 100%) !important;
+  background: linear-gradient(130deg, var(--bg-main), #000b16);
   background-attachment: fixed;
   color: var(--text-main);
 }
@@ -200,6 +197,60 @@ section {
   color: var(--accent-luxury);
 }
 
+
+/* STATUS BADGE */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 15px;
+  border: 1px groove var(--accent-glow);
+  border-radius: 50px;
+  margin-bottom: 20px;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-luxury);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.badge-dot::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--accent-luxury);
+  border-radius: 50%;
+  animation: badgePulse 1.8s infinite ease-in-out;
+}
+
+@keyframes badgePulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.badge-text {
+  font-size: 13px;
+  font-weight: 550;
+  text-transform: uppercase;
+  color: var(--text-main);
+}
+
 /* HOME SECTION */
 .home {
   scroll-margin-top: 80px;
@@ -328,7 +379,7 @@ section {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: luxuryMarquee 18s linear infinite;
+  animation: luxuryMarquee 28s linear infinite;
 }
 
 /* Individual Skill Style */
@@ -490,22 +541,11 @@ section {
 }
 
 .timeline-content {
-  /* background: #001d3d86; */
   padding: 28px;
   outline: none;
   border-radius: 8px;
-  /* box-shadow: var(--card-shadow); */
-  /* border: 1px solid var(--border-premium); */
   position: relative;
-  /* transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
-
-/* .timeline-content:hover {
-  transform: translateY(-5px);
-  background: var(--bg-card-hover);
-  border-bottom: 2px solid var(--accent-luxury);
-  box-shadow: 0 20px 40px var(--border-premium);
-} */
 
 .timeline-content h3 {
   font-size: 22px;
@@ -530,9 +570,7 @@ section {
 }
 
 
-/* ==========================================
-   SKILLS SECTION
-   ========================================== */
+/* SKILLS SECTION  */
 .skills {
   scroll-margin-top: 80px;
   padding: 140px 9% 100px;
@@ -618,7 +656,7 @@ section {
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border-premium);
-  border-top: 2px solid transparent; 
+  border-top: 2px solid transparent;
   transition: all 0.4s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -634,8 +672,8 @@ section {
 /* Image Fixes */
 .project-card img {
   width: 100%;
-  height: 220px; 
-  object-fit: cover; 
+  height: 220px;
+  object-fit: cover;
   background: var(--bg-main);
   display: block;
 }
@@ -652,7 +690,7 @@ section {
   margin-bottom: 10px;
   font-size: 20px;
 }
- 
+
 .project-card p {
   color: var(--text-muted);
   font-size: 15px;
@@ -958,7 +996,7 @@ section {
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 4, 15, 0.726);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 40px;
   border-radius: 20px;
@@ -1484,5 +1522,18 @@ section {
     padding: 12px 10px !important;
     font-size: 15px !important;
     box-sizing: border-box !important;
+  }
+}
+
+
+/* Badge responsiveness */
+@media (max-width: 768px) {
+  .hero-badge {
+    padding: 6px 14px;
+    margin-bottom: 15px;
+  }
+
+  .badge-text {
+    font-size: 12px;
   }
 }

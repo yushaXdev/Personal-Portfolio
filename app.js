@@ -205,11 +205,11 @@ particlesJS("particles-js", {
       "type": "circle"
     },
     "opacity": {
-      "value": 0.85,
+      "value": 0.8,
       "random": true
     },
     "size": {
-      "value": 2.5,
+      "value": 2.6,
       "random": true
     },
     "line_linked": {
@@ -221,7 +221,7 @@ particlesJS("particles-js", {
     },
     "move": {
       "enable": true,
-      "speed": 3.0,
+      "speed": 5.0,
       "direction": "none",
       "random": false,
       "straight": false,
