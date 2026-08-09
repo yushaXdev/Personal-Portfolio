@@ -15,25 +15,25 @@ window.addEventListener("load", () => {
     if (index < words.length - 1) {
       tl.to(word, {
         opacity: 1,
-        duration: 0.4,
+        duration: 1.5,
         ease: "power2.out"
       })
       .to(word, {
         opacity: 0,
-        duration: 0.4,
+        duration: 1.8,
         ease: "power2.in",
-        delay: 0.6 
+        delay: 0.8 
       });
     } else {
 
       tl.to(word, {
         opacity: 1,
-        duration: 0.6,
+        duration: 1.2,
         ease: "power2.out"
       })
       .to(word, {
         opacity: 0,
-        duration: 0.4,
+        duration: 1.4,
         ease: "power2.in",
         delay: 1.2 
       });
@@ -42,7 +42,7 @@ window.addEventListener("load", () => {
 
   tl.to(preloader, {
     opacity: 0,
-    duration: 0.9,
+    duration: 1.4,
     ease: "power2.inOut"
   });
 });
