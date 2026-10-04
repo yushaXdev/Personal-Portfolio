@@ -18,12 +18,12 @@ window.addEventListener("load", () => {
         duration: 1.5,
         ease: "power2.out"
       })
-      .to(word, {
-        opacity: 0,
-        duration: 1.8,
-        ease: "power2.in",
-        delay: 0.8 
-      });
+        .to(word, {
+          opacity: 0,
+          duration: 1.8,
+          ease: "power2.in",
+          delay: 0.8
+        });
     } else {
 
       tl.to(word, {
@@ -31,12 +31,12 @@ window.addEventListener("load", () => {
         duration: 1.2,
         ease: "power2.out"
       })
-      .to(word, {
-        opacity: 0,
-        duration: 1.4,
-        ease: "power2.in",
-        delay: 1.2 
-      });
+        .to(word, {
+          opacity: 0,
+          duration: 1.4,
+          ease: "power2.in",
+          delay: 1.2
+        });
     }
   });
 
@@ -50,83 +50,83 @@ window.addEventListener("load", () => {
 const cursor = document.querySelector('.custom-cursor');
 
 document.addEventListener('mousemove', (e) => {
-    window.requestAnimationFrame(() => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
+  window.requestAnimationFrame(() => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
 });
 
 // Hover States
 const luxuryElements = document.querySelectorAll('a, button, .project-card, .nav-links');
 luxuryElements.forEach(elem => {
-    elem.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
-    elem.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+  elem.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+  elem.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
 });
 
 // 2. ABOUT SECTION 
-gsap.fromTo(".about-content", 
-    { 
-        opacity: 0, 
-        y: 60,
-        scale: 0.95
-    }, 
-    { 
-        opacity: 1, 
-        y: 0, 
-        scale: 1,
-        scrollTrigger: {
-            trigger: "#about", 
-            start: "top 80%",
-            end: "top 30%",
-            scrub: 1 
-        }
+gsap.fromTo(".about-content",
+  {
+    opacity: 0,
+    y: 60,
+    scale: 0.95
+  },
+  {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top 80%",
+      end: "top 30%",
+      scrub: 1
     }
+  }
 );
 
 
 // 3. EDUCATION TIMELINE
-gsap.fromTo(".timeline-item", 
-    { 
-        opacity: 0, 
-        y: 80,
-        rotationY: 25 
-    }, 
-    { 
-        opacity: 1, 
-        y: 0, 
-        rotationY: 0,
-        stagger: 0.3, 
-        duration: 1,
-        ease: "back.out(1.4)", 
-        scrollTrigger: {
-            trigger: "#education",
-            start: "top 75%",
-            end: "bottom 15%",
-            toggleActions: "play reverse restart reverse" 
-        }
+gsap.fromTo(".timeline-item",
+  {
+    opacity: 0,
+    y: 80,
+    rotationY: 25
+  },
+  {
+    opacity: 1,
+    y: 0,
+    rotationY: 0,
+    stagger: 0.3,
+    duration: 1,
+    ease: "back.out(1.4)",
+    scrollTrigger: {
+      trigger: "#education",
+      start: "top 75%",
+      end: "bottom 15%",
+      toggleActions: "play reverse restart reverse"
     }
+  }
 );
 
 
 // 4. SKILLS SECTION 
-gsap.fromTo(".skill-card", 
-    { 
-        opacity: 0, 
-        scale: 0.7,
-        y: 100
-    }, 
-    { 
-        opacity: 1, 
-        scale: 1,
-        y: 0,
-        stagger: 0.15,
-        scrollTrigger: {
-            trigger: "#skills", 
-            start: "top 85%",
-            end: "top 20%",
-            scrub: 1.2 
-        }
+gsap.fromTo(".skill-card",
+  {
+    opacity: 0,
+    scale: 0.7,
+    y: 100
+  },
+  {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    stagger: 0.15,
+    scrollTrigger: {
+      trigger: "#skills",
+      start: "top 85%",
+      end: "top 20%",
+      scrub: 1.2
     }
+  }
 );
 
 
@@ -134,60 +134,60 @@ gsap.fromTo(".skill-card",
 
 // 5. PROJECTS SECTION 
 gsap.from(".project-card", {
-    scrollTrigger: {
-        trigger: ".projects-container",
-        start: "top 85%", 
-        toggleActions: "play none none none", 
-        invalidateOnRefresh: true, 
-    },
-    duration: 0.6,
-    scale: 0.95,   
-    opacity: 0,       
-    y: 30,         
-    stagger: 0.1,    
-    ease: "power2.out",
-    clearProps: "all" 
+  scrollTrigger: {
+    trigger: ".projects-container",
+    start: "top 85%",
+    toggleActions: "play none none none",
+    invalidateOnRefresh: true,
+  },
+  duration: 0.6,
+  scale: 0.95,
+  opacity: 0,
+  y: 30,
+  stagger: 0.1,
+  ease: "power2.out",
+  clearProps: "all"
 });
 
 
 // 6. GRAPHICS CREATIVE GALLERY
-gsap.fromTo(".graphic-card", 
-    { 
-        opacity: 0, 
-        scale: 0.8,
-        rotation: (i) => i % 2 === 0 ? -4 : 4 
-    }, 
-    { 
-        opacity: 1, 
-        scale: 1,
-        rotation: 0,
-        duration: 0.6,         
-        stagger: 0.12,          
-        ease: "power2.out",     
-        scrollTrigger: {
-            trigger: ".graphics", 
-            start: "top 80%",    
-            toggleActions: "restart none none none" 
-        }
+gsap.fromTo(".graphic-card",
+  {
+    opacity: 0,
+    scale: 0.8,
+    rotation: (i) => i % 2 === 0 ? -4 : 4
+  },
+  {
+    opacity: 1,
+    scale: 1,
+    rotation: 0,
+    duration: 0.6,
+    stagger: 0.12,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".graphics",
+      start: "top 80%",
+      toggleActions: "restart none none none"
     }
+  }
 );
 
 
 // 7. CONTACT SECTION
-gsap.fromTo(".contact-container", 
-    { 
-        opacity: 0, 
-        y: 50 
-    }, 
-    { 
-        opacity: 1, 
-        y: 0,
-        scrollTrigger: {
-            trigger: "#contactme", // ID Back!
-            start: "top 85%",
-            toggleActions: "play reverse restart reverse"
-        }
+gsap.fromTo(".contact-container",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    scrollTrigger: {
+      trigger: "#contactme", // ID Back!
+      start: "top 85%",
+      toggleActions: "play reverse restart reverse"
     }
+  }
 );
 particlesJS("particles-js", {
   "particles": {
@@ -260,16 +260,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const animateCircleProgress = (card) => {
     const wrapper = card.querySelector(".skill-circle-wrapper");
-    if (!wrapper) return; 
+    if (!wrapper) return;
 
     const target = parseInt(wrapper.getAttribute("data-target"), 10) || 0;
     const progressCircle = wrapper.querySelector(".circle-progress");
     const textDisplay = wrapper.querySelector(".circle-percentage-text");
-    
-    if (!progressCircle || !textDisplay) return; 
+
+    if (!progressCircle || !textDisplay) return;
 
 
-    const circumference = 251.2; 
+    const circumference = 251.2;
     const offset = circumference - (target / 100) * circumference;
 
 
@@ -281,13 +281,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     let currentCount = 0;
-    const duration = 1900; 
+    const duration = 1900;
     const stepTime = Math.max(Math.floor(duration / target), 10);
 
     const counter = setInterval(() => {
       currentCount++;
       textDisplay.textContent = `${currentCount}%`;
-      
+
       if (currentCount >= target) {
         clearInterval(counter);
       }
@@ -299,10 +299,69 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         animateCircleProgress(entry.target);
-        observer.unobserve(entry.target); 
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
 
   skillCards.forEach(card => observer.observe(card));
 });
+
+// Web3forms integration
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+const submitBtn = document.getElementById("submitBtn");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    // Save original button content
+    const originalBtnHTML = submitBtn.innerHTML;
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = "0.7";
+    submitBtn.style.cursor = "not-allowed";
+    submitBtn.innerHTML = "Sending...";
+
+    // Clear old status
+    formStatus.textContent = "";
+    formStatus.style.color = "";
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        formStatus.textContent = "✅ Message sent successfully! I'll get back to you soon.";
+        formStatus.style.color = "#4ade80";
+        contactForm.reset();
+
+        // Auto-hide success after 6 seconds
+        setTimeout(() => {
+          formStatus.textContent = "";
+        }, 6000);
+      } else {
+        formStatus.textContent = "❌ " + (data.message || "Something went wrong. Please try again.");
+        formStatus.style.color = "#f87171";
+      }
+    } catch (error) {
+      console.error("Form error:", error);
+      formStatus.textContent = "❌ Network error. Please check your connection and try again.";
+      formStatus.style.color = "#f87171";
+    } finally {
+      // Restore button
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = "1";
+      submitBtn.style.cursor = "pointer";
+      submitBtn.innerHTML = originalBtnHTML;
+    }
+  });
+}
