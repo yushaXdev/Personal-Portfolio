@@ -365,3 +365,44 @@ if (contactForm) {
     }
   });
 }
+
+// 1. Scroll Progress Bar Logic
+window.addEventListener('scroll', () => {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercentage = (scrollTop / scrollHeight) * 100;
+  
+  const progressBar = document.getElementById('scroll-progress');
+  if (progressBar) {
+    progressBar.style.width = scrollPercentage + '%';
+  }
+});
+
+// 2. Active Navbar Link 
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.navbar ul li a');
+
+if (sections.length > 0 && navLinks.length > 0) {
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -60% 0px', 
+    threshold: 0
+  };
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${entry.target.id}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+}

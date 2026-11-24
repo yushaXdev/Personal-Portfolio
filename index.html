@@ -5,26 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yusha Shahzad | Full Stack PHP & Laravel Developer</title>
+
+  <!-- SEO Meta Tags -->
   <meta name="title" content="Yusha Shahzad | Portfolio">
   <meta name="description"
-    content="Portfolio of Yusha Shahzad - Junior Full Stack Developer skilled in PHP, Laravel, HTML5, CSS3, JavaScript, Bootstrap5, jQuery, MySQL, Git & GitHub. Check out my projects and skills.">
+    content="Portfolio of Yusha Shahzad - Full Stack Developer skilled in PHP, Laravel, HTML5, CSS3, JavaScript, Bootstrap5, jQuery, MySQL, Git & GitHub. Check out my projects and skills.">
   <meta name="keywords"
     content="Yusha Shahzad, Portfolio, Full Stack Developer, PHP Developer, Laravel Developer, Backend Developer, Frontend Developer, Web Developer, JavaScript Developer, MySQL, Web Designer, HTML CSS, Graphic Designer">
   <meta name="author" content="Muhammad Yusha Shahzad">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#000600"> <!-- Mobile browser color -->
+
+  <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yushashahzad.vercel.app/">
   <meta property="og:title" content="Yusha Shahzad | Portfolio">
   <meta property="og:description"
-    content="Junior Full Stack PHP & Laravel Developer building clean, scalable, and modern web applications.">
+    content="Full Stack PHP & Laravel Developer building clean, scalable, and modern web applications.">
   <meta property="og:image" content="https://yushashahzad.vercel.app/Content/live-preview.png">
+
+  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://yushashahzad.vercel.app/">
   <meta property="twitter:title" content="Yusha Shahzad | Portfolio">
   <meta property="twitter:description"
     content="Full Stack PHP & Laravel Developer building clean, scalable, and modern web applications.">
   <meta property="twitter:image" content="https://yushashahzad.vercel.app/Content/live-preview.png">
+
+  <!-- Favicon & Fonts -->
   <link rel="shortcut icon" href="./Content/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Libraries -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./portfolio.css">
@@ -33,6 +49,7 @@
 <body>
 
   <div class="custom-cursor"></div>
+  <div id="scroll-progress"></div>
 
   <!-- LOADER -->
   <div id="luxury-preloader">
@@ -79,14 +96,14 @@
       </div>
 
       <h1>Muhammad Yusha Shahzad</h1>
-      <h2>I'm a <span class="highlightedtext" id="element"></span> </h2>
+      <h2>I build <span class="highlightedtext" id="element"></span></h2>
       <p>
-        Passionate <strong>Full Stack Developer</strong> specializing in <strong>PHP & Laravel</strong>.
-        I craft clean, scalable web applications — from pixel-perfect frontends to robust, secure backends
-        powered by modern architecture and best practices.
+        Full Stack Developer specializing in <strong>Laravel, PHP & MySQL</strong> —
+        I ship production-ready <strong>REST APIs</strong>, secure admin systems, and
+        responsive frontends that turn business requirements into working software.
       </p>
       <div class="btn-sci">
-        <a href="./Content/Yusha Resume.pdf" download class="btn">Reach Out My Resume</a>
+        <a href="./Content/Yusha Resume.pdf" download class="btn">Download Resume</a>
         <div class="sci">
           <a href="https://github.com/yushaXdev" target="_blank"><i class='bx bxl-github'></i></a>
           <a href="https://www.linkedin.com/in/yushashahzad" target="_blank"><i class='bx bxl-linkedin'></i></a>
@@ -148,29 +165,35 @@
 
   <!-- ABOUT ME -->
   <section class="about" id="about">
-    <div class="about-content">
+    <div class="about-content sketchy-card">
+
+      <div class="about-glow"></div>
+
       <h2 class="heading">Who <span>Am I ?</span></h2>
       <h3>Bridging Design & Code</h3>
-      <p>
-        I am a Karachi-based <strong>Full Stack Developer</strong> specializing in
-        <strong>PHP, Laravel & MySQL</strong>, with a strong foundation in
-        <strong>Frontend Development</strong> and <strong>Graphic Design</strong>. I bridge the gap between
-        visually stunning UI designs and clean, scalable backend architecture.
-      </p>
-      <p>
-        Whether crafting intuitive interfaces in Photoshop, building responsive frontends, or engineering
-        secure <strong>RESTful APIs</strong> with <strong>Laravel</strong> and
-        <strong>MySQL</strong>, I focus on creating modern web applications that perform as beautifully
-        as they look — from database to deployment.
-      </p>
-      <p>
-        I am currently open for <strong>freelance projects</strong>, remote opportunities, and collaborative work.
-        Let’s connect to bring your ideas to life!
-      </p>
+
+      <div class="about-text-wrapper">
+        <p>
+          I am a Karachi-based <strong>Full Stack Developer</strong> specializing in
+          <strong>PHP, Laravel & MySQL</strong>, with a strong foundation in
+          <strong>Frontend Development</strong> and <strong>Graphic Design</strong>. I bridge the gap between
+          visually stunning UI designs and clean, scalable backend architecture.
+        </p>
+        <p>
+          Whether crafting intuitive interfaces in Photoshop, building responsive frontends, or engineering
+          secure <strong>RESTful APIs</strong> with <strong>Laravel</strong> and
+          <strong>MySQL</strong>, I focus on creating modern web applications that perform as beautifully
+          as they look — from database to deployment.
+        </p>
+        <p>
+          I am currently open for <strong>freelance projects</strong>, remote opportunities, and collaborative work.
+          Let’s connect to bring your ideas to life!
+        </p>
+      </div>
+
       <a href="#contactme" class="btn abt-btn">Let's Collaborate</a>
     </div>
   </section>
-
 
 
   <!-- skills section -->
@@ -484,7 +507,7 @@
     <div class="section-particles"></div>
 
     <h2>MY <span class="designed-header">PROJECTS</span></h2>
-    <p class="sub-text">Mastering Frontend Aesthetics</p>
+    <p class="sub-text">Mastering Development Aesthetics</p>
 
     <div class="projects-container">
 
@@ -493,8 +516,19 @@
         <img src="./Content/live-proj-1.png" alt="Project" loading="lazy">
         <div class="project-info">
           <h3>Divine Names Of Allah</h3>
-          <p>beautifully crafted web application displaying the <strong>99 Blessed Names of Allah
-              (Asma-ul-Husna)</strong>, built with modern frontend technologies by the grace of Almighty Allah.</p>
+          <p style="margin-bottom: 15px;">
+            <strong>Mobile-First SPA:</strong> A beautifully crafted application displaying the 99 Blessed Names of
+            Allah (Asma-ul-Husna).
+          </p>
+          <ul
+            style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px; padding-left: 20px; line-height: 1.6;">
+            <li><strong style="color: var(--accent-luxury);">UI/UX:</strong> Clean typography and smooth scroll
+              transitions for an immersive experience.</li>
+            <li><strong style="color: var(--accent-luxury);">Tech Stack:</strong> Built with Vanilla HTML/CSS/JS for
+              lightweight, high performance.</li>
+            <li><strong style="color: var(--accent-luxury);">Deployment:</strong> Serverless deployment on Vercel with
+              optimized load times.</li>
+          </ul>
         </div>
         <div class="buttons">
           <a href="https://divine-names-nu.vercel.app/" target="_blank">See it in Action</a>
@@ -506,9 +540,19 @@
         <img src="./Content/live-proj-2.png" alt="Project" loading="lazy">
         <div class="project-info">
           <h3>Fully functional Zoo website</h3>
-          <p>A modern, fully responsive <strong>Central Zoo Web Platform</strong> built using advanced frontend
-            techniques. Designed to offer visitors an engaging user experience, featuring interactive animal showcases,
-            dynamic site navigation, and seamless performance across all screen sizes.</p>
+          <p style="margin-bottom: 15px;">
+            <strong>Central Zoo Platform:</strong> A modern, multi-page web platform designed to offer an engaging user
+            experience for zoo visitors.
+          </p>
+          <ul
+            style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px; padding-left: 20px; line-height: 1.6;">
+            <li><strong style="color: var(--accent-luxury);">Features:</strong> Interactive animal showcases and dynamic
+              site navigation.</li>
+            <li><strong style="color: var(--accent-luxury);">Architecture:</strong> Built with Bootstrap & Vanilla JS
+              for cross-device compatibility.</li>
+            <li><strong style="color: var(--accent-luxury);">Performance:</strong> Optimized layouts ensuring fast load
+              times on low-end mobile devices.</li>
+          </ul>
         </div>
         <div class="buttons">
           <a href="https://yushaxdev.github.io/e-project/" target="_blank">See it in Action</a>
@@ -520,11 +564,19 @@
         <img src="./Content/live-proj-5.png" alt="Project" loading="lazy">
         <div class="project-info">
           <h3>Fully functional Space Website</h3>
-          <p>
-            A modern, fully responsive <strong>Space Exploration Web Platform</strong> featuring an integrated cosmic
-            marketplace. Built with advanced web technologies, it offers an immersive experience with interactive pages,
-            dynamic navigation, and seamless cross-device performance.
+          <p style="margin-bottom: 15px;">
+            <strong>Space Exploration Hub:</strong> An immersive web platform featuring a cosmic marketplace and dynamic
+            multi-page navigation.
           </p>
+          <ul
+            style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px; padding-left: 20px; line-height: 1.6;">
+            <li><strong style="color: var(--accent-luxury);">Complex UI:</strong> Integrated a functional marketplace
+              layout within the space theme.</li>
+            <li><strong style="color: var(--accent-luxury);">Optimization:</strong> Implemented lazy-loading for imagery
+              to maintain high performance.</li>
+            <li><strong style="color: var(--accent-luxury);">Responsive:</strong> Mobile-first breakpoints ensuring
+              seamless visuals across all screens.</li>
+          </ul>
         </div>
         <div class="buttons">
           <a href="https://eventidespace.vercel.app/" target="_blank">See it in Action</a>
@@ -536,14 +588,19 @@
         <img src="./Content/fan hub admin .png" alt="Project" loading="lazy">
         <div class="project-info">
           <h3>Fan Hub Admin Panel — TechWiz 7</h3>
-          <p>
-            A fully functional <strong>Admin Panel</strong> built with <strong>PHP</strong> and <strong>MySQL</strong>
-            for
-            <strong>TechWiz Global Competition 7</strong>. Features secure admin authentication, a dynamic dashboard,
-            and complete <strong>CRUD operations</strong> for managing content, users, and site data. Designed with a
-            clean,
-            responsive interface and a scalable backend architecture that ensures smooth data flow across all devices.
+          <p style="margin-bottom: 15px;">
+            <strong>TechWiz Global 7 Entry:</strong> A secure Admin Panel built with PHP & MySQL to manage users,
+            content, and site data.
           </p>
+          <ul
+            style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px; padding-left: 20px; line-height: 1.6;">
+            <li><strong style="color: var(--accent-luxury);">Security:</strong> Implemented session-based auth &
+              prepared statements to prevent SQL injection.</li>
+            <li><strong style="color: var(--accent-luxury);">Features:</strong> Real-time dashboard stats & complete
+              CRUD operations.</li>
+            <li><strong style="color: var(--accent-luxury);">Design:</strong> Fully responsive UI for seamless mobile
+              management.</li>
+          </ul>
         </div>
         <div class="buttons">
           <a href="https://github.com/yushaXdev/Admin-Panel-for-fahub-plus-techwiz-7-.git" target="_blank">Review
@@ -688,15 +745,25 @@
             href="https://mail.google.com/mail/?view=cm&fs=1&to=yushashahzad2008@gmail.com&su=Project Inquiry&body=Hello Yusha, I would like to discuss a project with you."
             target="_blank">yushashahzad2008@gmail.com</a></p>
         <p><strong>Phone:</strong> +92 3359997943</p>
+        <!-- cal.com -->
+        <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+          <a href="./Content/Yusha Resume.pdf" download class="btn" style="padding: 12px 24px;">
+            Download Resume
+          </a>
+          <a href="https://cal.com/yusha-shahzad" target="_blank" rel="noopener" class="btn"
+            style="padding: 12px 24px;">
+            Book a 15-min Call
+          </a>
+        </div>
       </div>
 
       <!-- Right Form -->
-      <form class="contact-form" id="contactForm" data-aos="fade-left">
+      <form class="contact-form" id="contactForm">
         <!-- Web3Forms Access Key -->
         <input type="hidden" name="access_key" value="722dade5-ab52-4edf-ae5c-4dc50d89c75c">
 
         <!-- Email subject -->
-        <input type="hidden" name="subject" value="New message from Portfolio">
+        <input type="hidden" name="subject" value="A New message from Portfolio">
 
         <!-- From name  -->
         <input type="hidden" name="from_name" value="Yusha Portfolio Contact Form">
@@ -705,8 +772,8 @@
         <input type="checkbox" name="botcheck" style="display:none !important;" tabindex="-1" autocomplete="off">
 
         <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="email" name="email" placeholder="Enter a valid email" required>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
 
         <button type="submit" class="btn btn-send" id="submitBtn">
           Let's Connect <i class='bx bx-send'></i>
@@ -726,9 +793,11 @@
       <p>&copy; 2026 | Muhammad Yusha Shahzad | All Rights Reserved</p>
 
       <div class="socials">
-        <a href="https:// " target="_blank"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://github.com/yushaXdev" target="_blank"><i class='bx bxl-github'></i></a>
-        <a href="https://www.instagram.com/https_yusha/" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://www.linkedin.com/in/yushashahzad" target="_blank" aria-label="LinkedIn"><i
+            class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/yushaXdev" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+        <a href="https://www.instagram.com/https_yusha/" target="_blank" aria-label="Instagram"><i
+            class='bx bxl-instagram'></i></a>
       </div>
     </div>
 
@@ -749,10 +818,10 @@
   <script>
     var typed = new Typed('#element', {
       strings: [
-        "Full Stack Developer",
-        "Backend Developer",
-        "Frontend Developer",
-        "UI/UX Designer"
+        "Laravel REST APIs",
+        "Scalable Admin Panels",
+        "Modern Web Interfaces",
+        "Secure Backends"
       ],
       typeSpeed: 85,
       backSpeed: 50,
@@ -762,7 +831,6 @@
     });
 
   </script>
-</body>
 </body>
 
 </html>
